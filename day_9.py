@@ -101,7 +101,7 @@ def create_grid(points, char1, char2):
 
 # ===== Claude Functions =====
 
-def cross_product(O, A, B):
+def cross_product(O, A, B):  # noqa: E741
     """
     Calculate the cross product of vectors OA and OB.
     Positive: B is on the left of OA
