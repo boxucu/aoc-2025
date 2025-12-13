@@ -2,6 +2,9 @@ import time
 start_time = time.time()  # Record the start time
 
 # ===== Functions =====
+def check_9x9(row, col, count):
+    if sum(count) <= (row // 3) * (col // 3):
+        return True
 
 # ===== Main =====
 # Initial
@@ -31,7 +34,8 @@ with open(file_path, "r") as file:
 
 puzzles = len(space)
 for puzzle in range (0, puzzles):
-    if 9 * sum(counts[puzzle]) <= space[puzzle][0] * space[puzzle][1]:
+    row, col = space[puzzle]
+    if check_9x9(row, col, counts[puzzle]):
         sum1 += 1
 
 # Result
